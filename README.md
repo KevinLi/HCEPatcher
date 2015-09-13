@@ -1,0 +1,1 @@
+# HCEPatcherHalo Custom Edition Server PatcherUpdated for 1.10.  Only the CD Key check for 1.10 has been tested.
