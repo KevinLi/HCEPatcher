@@ -18,32 +18,32 @@
 
         public int[] Patch_ASCII1Loc = new int[] {
             0xCDCB9,
-            0xce0b9,
-            0xce089,
-            0xcdf79,
-            0xcdf08,
+            0xCE0B9,
+            0xCE089,
+            0xCDF79,
+            0xCDF08,
         };
 
         public byte[][] Patch_ASCII1Orig = new byte[][] {
             new byte[] { 0x74, 0x5D },
-            new byte[] { 0x74, 0x5d },
-            new byte[] { 0x74, 0x5d },
-            new byte[] { 0x74, 0x5d },
+            new byte[] { 0x74, 0x5D },
+            new byte[] { 0x74, 0x5D },
+            new byte[] { 0x74, 0x5D },
             new byte[] { 0x74, 0x60 },
         };
         public int[] Patch_ASCII2Loc = new int[] {
             0xCDCCB,
-            0xce0cb,
-            0xce09b,
-            0xcdf8b,
-            0xcdf1a,
+            0xCE0CB,
+            0xCE09B,
+            0xCDF8B,
+            0xCDF1A,
         };
         public byte[][] Patch_ASCII2Orig = new byte[][] {
             new byte[] { 0x74, 0x4B },
-            new byte[] { 0x74, 0x4b },
-            new byte[] { 0x74, 0x4b },
-            new byte[] { 0x74, 0x4b },
-            new byte[] { 0x74, 0x4e },
+            new byte[] { 0x74, 0x4B },
+            new byte[] { 0x74, 0x4B },
+            new byte[] { 0x74, 0x4B },
+            new byte[] { 0x74, 0x4E },
         };
 
         public byte[][] Patch_DevModeEnable = new byte[][] {
@@ -55,10 +55,10 @@
         };
         public int[] Patch_DevModeLoc = new int[] {
             0x7DAED,
-            0x7dc4d,
-            0x7dc3d,
-            0x7dc5d,
-            0x7dc4d,
+            0x7DC4D,
+            0x7DC3D,
+            0x7DC5D,
+            0x7DC4D,
         };
         public byte[][] Patch_DevModeOrig = new byte[][] {
             new byte[] { 0x74, 0x18 },
@@ -69,41 +69,41 @@
         };
 
         public int[] Patch_NoKeyLoc = new int[] {
-            0x12f507,
-            0x12fa87,
-            0x12f9d7,
-            0x12f907,
-            0x12f857,
+            0x12F507,
+            0x12FA87,
+            0x12F9D7,
+            0x12F907,
+            0x12F857,
         };
         public byte[][] Patch_NoKeyOrig = new byte[][] {
-            new byte[] { 0x81, 0xef, 0xd0, 0xf8, 0x5a, 0 },
-            new byte[] { 0x81, 0xef, 0xf0, 0xf8, 0x5a, 0 },
-            new byte[] { 0x81, 0xef, 0x68, 0xf8, 0x5a, 0 },
-            new byte[] { 0x81, 0xef, 0x68, 0xf8, 0x5a, 0 },
-            new byte[] { 0x81, 0xef, 0x68, 0xf8, 0x5a, 0 },
+            new byte[] { 0x81, 0xEF, 0xD0, 0xF8, 0x5A, 0x00 },
+            new byte[] { 0x81, 0xEF, 0xF0, 0xF8, 0x5A, 0x00 },
+            new byte[] { 0x81, 0xEF, 0x68, 0xF8, 0x5A, 0x00 },
+            new byte[] { 0x81, 0xEF, 0x68, 0xF8, 0x5A, 0x00 },
+            new byte[] { 0x81, 0xEF, 0x68, 0xF8, 0x5A, 0x00 },
         };
 
         public byte[][] Patch_VerComp = new byte[][] {
-            new byte[] { 0x81, 0xF9, 0x27, 0x6A, 0x09, 0 },
-            new byte[] { 0x81, 0xf9, 0x27, 0x6a, 0x09, 0 },
-            new byte[] { 0x81, 0xf9, 0xe7, 0xcf, 0x5b, 0 },
-            new byte[] { 0x81, 0xf9, 0x2f, 0xc4, 0x5b, 0 },
-            new byte[] { 0x81, 0xf9, 0xcf, 0x4e, 0x09, 0 },
+            new byte[] { 0x81, 0xF9, 0x27, 0x6A, 0x09, 0x00 },
+            new byte[] { 0x81, 0xF9, 0x27, 0x6A, 0x09, 0x00 },
+            new byte[] { 0x81, 0xF9, 0xE7, 0xCF, 0x5B, 0x00 },
+            new byte[] { 0x81, 0xF9, 0x2F, 0xC4, 0x5B, 0x00 },
+            new byte[] { 0x81, 0xF9, 0xCF, 0x4E, 0x09, 0x00 },
         };
         public int[] Patch_VerCompLoc = new int[] {
             0xCB1A1,
-            0xcb581,
-            0xcb551,
-            0xcb441,
-            0xcb3e1,
+            0xCB581,
+            0xCB551,
+            0xCB441,
+            0xCB3E1,
         };
 
         public int[] Patch_VerLoc = new int[] {
             0x164ADC,
-            0x164b34,
-            0x164b74,
-            0x164b74,
-            0x164b74,
+            0x164B34,
+            0x164B74,
+            0x164B74,
+            0x164B74,
         };
 
         public int UseAddressSet = -1;
@@ -137,7 +137,7 @@
                 for (int i = 0; i < length; i++)
                 {
                     this.Patch.ReadString(this.Patch_NoKeyLoc[i] - 2, 2, ref readData);
-                    if (readData == "+\x00fa")
+                    if (readData == "\x2B\xFA")
                     {
                         return i;
                     }
