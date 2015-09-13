@@ -7,6 +7,7 @@
         public long[] Dedi_Sizes = new long[] { 0x1c0000L, 0x1c2438L, 0x1c0000L, 0x1c0000L };
         public string Filename;
         public string[] Halo_Vers = new string[] {
+            "01.00.10.0621",
             "01.00.09.0620",
             "01.00.08.0616",
             "01.00.07.0613",
@@ -16,6 +17,7 @@
         public Patcher Patch = new Patcher();
 
         public int[] Patch_ASCII1Loc = new int[] {
+            0xCDCB9,
             0xce0b9,
             0xce089,
             0xcdf79,
@@ -23,18 +25,21 @@
         };
 
         public byte[][] Patch_ASCII1Orig = new byte[][] {
+            new byte[] { 0x74, 0x5D },
             new byte[] { 0x74, 0x5d },
             new byte[] { 0x74, 0x5d },
             new byte[] { 0x74, 0x5d },
             new byte[] { 0x74, 0x60 },
         };
         public int[] Patch_ASCII2Loc = new int[] {
+            0xCDCCB,
             0xce0cb,
             0xce09b,
             0xcdf8b,
             0xcdf1a,
         };
         public byte[][] Patch_ASCII2Orig = new byte[][] {
+            new byte[] { 0x74, 0x4B },
             new byte[] { 0x74, 0x4b },
             new byte[] { 0x74, 0x4b },
             new byte[] { 0x74, 0x4b },
@@ -46,8 +51,10 @@
             new byte[] { 0x74, 0x77 },
             new byte[] { 0x74, 0x77 },
             new byte[] { 0x74, 0x77 },
+            new byte[] { 0x74, 0x77 },
         };
         public int[] Patch_DevModeLoc = new int[] {
+            0x7DAED,
             0x7dc4d,
             0x7dc3d,
             0x7dc5d,
@@ -58,15 +65,18 @@
             new byte[] { 0x74, 0x18 },
             new byte[] { 0x74, 0x18 },
             new byte[] { 0x74, 0x18 },
+            new byte[] { 0x74, 0x18 },
         };
 
         public int[] Patch_NoKeyLoc = new int[] {
+            0x12f507,
             0x12fa87,
             0x12f9d7,
             0x12f907,
             0x12f857,
         };
         public byte[][] Patch_NoKeyOrig = new byte[][] {
+            new byte[] { 0x81, 0xef, 0xd0, 0xf8, 0x5a, 0 },
             new byte[] { 0x81, 0xef, 0xf0, 0xf8, 0x5a, 0 },
             new byte[] { 0x81, 0xef, 0x68, 0xf8, 0x5a, 0 },
             new byte[] { 0x81, 0xef, 0x68, 0xf8, 0x5a, 0 },
@@ -74,12 +84,14 @@
         };
 
         public byte[][] Patch_VerComp = new byte[][] {
+            new byte[] { 0x81, 0xF9, 0x27, 0x6A, 0x09, 0 },
             new byte[] { 0x81, 0xf9, 0x27, 0x6a, 0x09, 0 },
             new byte[] { 0x81, 0xf9, 0xe7, 0xcf, 0x5b, 0 },
             new byte[] { 0x81, 0xf9, 0x2f, 0xc4, 0x5b, 0 },
             new byte[] { 0x81, 0xf9, 0xcf, 0x4e, 0x09, 0 },
         };
         public int[] Patch_VerCompLoc = new int[] {
+            0xCB1A1,
             0xcb581,
             0xcb551,
             0xcb441,
@@ -87,6 +99,7 @@
         };
 
         public int[] Patch_VerLoc = new int[] {
+            0x164ADC,
             0x164b34,
             0x164b74,
             0x164b74,
